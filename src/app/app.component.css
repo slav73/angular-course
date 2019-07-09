@@ -9,11 +9,22 @@
 }
 
 
-.courses {
-    max-width: 400px;
-    margin: 50px auto;
+.button {
+  background: yellow;
 }
 
+p:target {
+  background: green;
+}
 
+li:first-child {
+  color: red;
+}
 
+li:last-child {
+  color: green;
+}
 
+li:nth-child(3) {
+  color: blue;
+}

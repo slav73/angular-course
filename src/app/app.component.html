@@ -5,10 +5,16 @@
   />
 </div>
 
-<h1>{{ coreCourse.description }}</h1>
-
 <div class="courses">
-  <course-card [course]="coreCourse"></course-card>
-  <course-card [course]="rxjsCourse"></course-card>
-  <course-card [course]="ngrxCourse"></course-card>
+  <course-card
+    *ngFor="
+      let course of courses;
+      index as i;
+      last as isLast
+    "
+    [class.is-last]="isLast"
+    (courseSelected)="onCourseSelected($event)"
+    [course]="course"
+    [courseIndex]="i + 1"
+  ></course-card>
 </div>
